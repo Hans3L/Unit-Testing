@@ -22,5 +22,4 @@ public class SingletonMessageServiceWithoutInjectionTest {
         LogManager.getLogger(this.getClass()).info("=======>>> NOTE, without injection");
         LogManager.getLogger(this.getClass()).info("==========>> message: " + this.singletonMessageService.getMessage());
     }
-
 }
