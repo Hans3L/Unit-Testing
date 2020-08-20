@@ -22,9 +22,4 @@ public class InjectionMainMessageServiceMockTest {
         given(this.singletonMessageServiceMock.getMessage()).willReturn("ok");
         Assert.assertEquals("ok",this.injectionMain.getMessage());
     }
-
-
-
-
-
 }

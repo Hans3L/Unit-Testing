@@ -27,11 +27,11 @@ public class ContactsManagementServiceIntegrationTest {
 		aContact.setFirstName("Jenny");
 		aContact.setLastName("Johnson");
 		aContact.setEmail("jennyJohnson@gmail.com");
-		aContact.setDeliveryAddressCity("Lima");
-		aContact.setDeliveryAddressLine1("Avenue Sun 501");
-		aContact.setDeliveryAddressLine2("MZ S5 LT 36");
-		aContact.setDeliveryAddressLZipCode("13564");
-		aContact.setDeliveryAddressState("Kansas");
+        aContact.setDeliveryAddressCity("Lima");
+        aContact.setDeliveryAddressLine1("Avenue Sun 501");
+        aContact.setDeliveryAddressLine2("MZ S5 LT 36");
+        aContact.setDeliveryAddressLZipCode("13564");
+        aContact.setDeliveryAddressState("Kansas");
 
 		// Test adding the contact
 		CustomerContact newCustomer = contactsManagementService.add(aContact);
