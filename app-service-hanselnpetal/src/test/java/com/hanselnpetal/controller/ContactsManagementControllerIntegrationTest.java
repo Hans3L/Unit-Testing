@@ -28,28 +28,15 @@ public class ContactsManagementControllerIntegrationTest {
         CustomerContact cContact = new CustomerContact();
         cContact.setFirstName("Hansel");
         cContact.setLastName("Ingaruca Rimac");
-
         // String newContact = contactsManagementController.processAddContactSubmit(cContact);
-
-        Assert.assertEquals(this.contactsManagementController.processAddContactSubmit(cContact), "success");
-        LOG.info("Datos a comparar 1 --> " + cContact);
+        Assert.assertEquals(this.contactsManagementController.processAddContactSubmit(cContact), "/addContactForm");
     }
 
     @Test
     public void testAddContactFirstNameMissing() {
-
         CustomerContact customerContact = new CustomerContact();
         String empty = contactsManagementController.processAddContactSubmit(customerContact);
-
-        Assert.assertEquals(empty, "failure");
-    }
-
-    @Test
-    public void testEmpty() {
-        try {
-            this.contactsManagementController.processAddContactSubmit(null);
-        } catch (RuntimeException e) {
-            Assert.assertTrue(true);
-        }
+        Assert.assertNull(empty, null);
+        LOG.info("Datos a comparar 1 --> " + empty);
     }
 }
